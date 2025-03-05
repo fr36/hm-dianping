@@ -16,8 +16,7 @@ import java.time.LocalDateTime;
  * 
  * </p>
  *
- * @author 虎哥
- * @since 2021-12-22
+ * 优惠券实体类，存储优惠券的基本信息，如标题、规则、使用条件等
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
@@ -95,11 +94,9 @@ public class Voucher implements Serializable {
      */
     private LocalDateTime createTime;
 
-
     /**
      * 更新时间
      */
     private LocalDateTime updateTime;
-
 
 }

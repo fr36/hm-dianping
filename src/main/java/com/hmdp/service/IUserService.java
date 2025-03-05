@@ -13,8 +13,7 @@ import javax.servlet.http.HttpSession;
  * 服务类
  * </p>
  *
- * @author 虎哥
- * @since 2021-12-22
+ * 用户服务接口，定义用户登录、注册、信息查询等功能
  */
 public interface IUserService extends IService<User> {
 

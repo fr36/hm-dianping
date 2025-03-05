@@ -15,8 +15,7 @@ import java.time.LocalDateTime;
  * 
  * </p>
  *
- * @author 虎哥
- * @since 2021-12-22
+ * 关注关系实体类，存储用户的关注记录
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
@@ -46,6 +45,5 @@ public class Follow implements Serializable {
      * 创建时间
      */
     private LocalDateTime createTime;
-
 
 }

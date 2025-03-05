@@ -15,8 +15,7 @@ import java.time.LocalDateTime;
  * 
  * </p>
  *
- * @author 虎哥
- * @since 2021-12-22
+ * 用户实体类，存储用户的基本信息，如昵称、手机号、头像等
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
@@ -61,6 +60,5 @@ public class User implements Serializable {
      * 更新时间
      */
     private LocalDateTime updateTime;
-
 
 }

@@ -5,11 +5,10 @@ import com.baomidou.mybatisplus.extension.service.IService;
 
 /**
  * <p>
- *  服务类
+ * 服务类
  * </p>
  *
- * @author 虎哥
- * @since 2021-12-22
+ * 关注服务接口，定义用户关注、取关、共同关注查询等功能
  */
 public interface IFollowService extends IService<Follow> {
 

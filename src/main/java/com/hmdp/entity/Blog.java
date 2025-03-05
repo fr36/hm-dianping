@@ -16,8 +16,7 @@ import java.time.LocalDateTime;
  * 
  * </p>
  *
- * @author 虎哥
- * @since 2021-12-22
+ * 博客实体类，存储博客的基本信息，如标题、内容、点赞数等
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
@@ -90,6 +89,5 @@ public class Blog implements Serializable {
      * 更新时间
      */
     private LocalDateTime updateTime;
-
 
 }

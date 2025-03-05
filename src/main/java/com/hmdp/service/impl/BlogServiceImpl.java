@@ -8,11 +8,10 @@ import org.springframework.stereotype.Service;
 
 /**
  * <p>
- *  服务实现类
+ * 服务实现类
  * </p>
  *
- * @author 虎哥
- * @since 2021-12-22
+ * 博客服务实现类，提供博客的发布、点赞、查询等功能
  */
 @Service
 public class BlogServiceImpl extends ServiceImpl<BlogMapper, Blog> implements IBlogService {

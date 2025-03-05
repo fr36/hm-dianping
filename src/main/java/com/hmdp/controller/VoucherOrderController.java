@@ -1,6 +1,5 @@
 package com.hmdp.controller;
 
-
 import com.hmdp.dto.Result;
 import com.hmdp.service.IVoucherOrderService;
 import com.hmdp.service.IVoucherService;
@@ -13,11 +12,10 @@ import javax.annotation.Resource;
 
 /**
  * <p>
- *  前端控制器
+ * 前端控制器
  * </p>
  *
- * @author 虎哥
- * @since 2021-12-22
+ * 优惠券订单控制器，提供优惠券下单功能
  */
 @RestController
 @RequestMapping("/voucher-order")
@@ -25,6 +23,7 @@ public class VoucherOrderController {
 
     @Resource
     private IVoucherOrderService voucherOrderService;
+
     @PostMapping("seckill/{id}")
     public Result seckillVoucher(@PathVariable("id") Long voucherId) {
         return voucherOrderService.seckillVoucher(voucherId);

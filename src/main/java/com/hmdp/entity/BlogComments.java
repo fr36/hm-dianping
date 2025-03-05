@@ -15,8 +15,7 @@ import java.time.LocalDateTime;
  * 
  * </p>
  *
- * @author 虎哥
- * @since 2021-12-22
+ * 博客评论实体类，存储用户对博客的评论信息
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
@@ -76,6 +75,5 @@ public class BlogComments implements Serializable {
      * 更新时间
      */
     private LocalDateTime updateTime;
-
 
 }

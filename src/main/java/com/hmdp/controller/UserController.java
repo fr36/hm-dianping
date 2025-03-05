@@ -19,8 +19,7 @@ import javax.servlet.http.HttpSession;
  * 前端控制器
  * </p>
  *
- * @author 虎哥
- * @since 2021-12-22
+ * 用户控制器，提供用户登录、注册、信息查询等功能
  */
 @Slf4j
 @RestController

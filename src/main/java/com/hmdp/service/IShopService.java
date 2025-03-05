@@ -6,11 +6,10 @@ import com.baomidou.mybatisplus.extension.service.IService;
 
 /**
  * <p>
- *  服务类
+ * 服务类
  * </p>
  *
- * @author 虎哥
- * @since 2021-12-22
+ * 商铺服务接口，定义商铺信息的查询、更新等功能
  */
 public interface IShopService extends IService<Shop> {
 

@@ -1,6 +1,5 @@
 package com.hmdp.controller;
 
-
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.hmdp.dto.Result;
 import com.hmdp.dto.UserDTO;
@@ -20,8 +19,7 @@ import java.util.List;
  * 前端控制器
  * </p>
  *
- * @author 虎哥
- * @since 2021-12-22
+ * 博客控制器，提供博客的发布、点赞、查询等功能
  */
 @RestController
 @RequestMapping("/blog")
@@ -72,7 +70,7 @@ public class BlogController {
         // 获取当前页数据
         List<Blog> records = page.getRecords();
         // 查询用户
-        records.forEach(blog ->{
+        records.forEach(blog -> {
             Long userId = blog.getUserId();
             User user = userService.getById(userId);
             blog.setName(user.getNickName());

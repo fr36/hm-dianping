@@ -16,8 +16,7 @@ import java.time.LocalDateTime;
  * 
  * </p>
  *
- * @author 虎哥
- * @since 2021-12-22
+ * 商铺类型实体类，存储商铺分类信息
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
@@ -59,6 +58,5 @@ public class ShopType implements Serializable {
      */
     @JsonIgnore
     private LocalDateTime updateTime;
-
 
 }

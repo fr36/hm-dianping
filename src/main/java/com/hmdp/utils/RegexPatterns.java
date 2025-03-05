@@ -1,7 +1,7 @@
 package com.hmdp.utils;
 
 /**
- * @author 虎哥
+ * 正则表达式常量类，定义各种常用的正则表达式模式
  */
 public abstract class RegexPatterns {
     /**

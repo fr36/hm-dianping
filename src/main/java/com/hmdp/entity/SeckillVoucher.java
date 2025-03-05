@@ -15,8 +15,7 @@ import java.time.LocalDateTime;
  * 秒杀优惠券表，与优惠券是一对一关系
  * </p>
  *
- * @author 虎哥
- * @since 2022-01-04
+ * 秒杀优惠券实体类，存储秒杀优惠券的特有信息，如库存、开始时间、结束时间等
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
@@ -56,6 +55,5 @@ public class SeckillVoucher implements Serializable {
      * 更新时间
      */
     private LocalDateTime updateTime;
-
 
 }

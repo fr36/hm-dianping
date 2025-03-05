@@ -5,11 +5,10 @@ import com.baomidou.mybatisplus.extension.service.IService;
 
 /**
  * <p>
- *  服务类
+ * 服务类
  * </p>
  *
- * @author 虎哥
- * @since 2021-12-22
+ * 博客服务接口，定义博客的发布、点赞、查询等功能
  */
 public interface IBlogService extends IService<Blog> {
 

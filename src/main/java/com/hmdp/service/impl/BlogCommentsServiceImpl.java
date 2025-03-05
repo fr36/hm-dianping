@@ -8,13 +8,13 @@ import org.springframework.stereotype.Service;
 
 /**
  * <p>
- *  服务实现类
+ * 服务实现类
  * </p>
  *
- * @author 虎哥
- * @since 2021-12-22
+ * 博客评论服务实现类，提供博客评论的相关功能
  */
 @Service
-public class BlogCommentsServiceImpl extends ServiceImpl<BlogCommentsMapper, BlogComments> implements IBlogCommentsService {
+public class BlogCommentsServiceImpl extends ServiceImpl<BlogCommentsMapper, BlogComments>
+        implements IBlogCommentsService {
 
 }

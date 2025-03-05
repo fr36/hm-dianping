@@ -8,13 +8,13 @@ import org.springframework.stereotype.Service;
 
 /**
  * <p>
- * 秒杀优惠券表，与优惠券是一对一关系 服务实现类
+ * 服务实现类
  * </p>
  *
- * @author 虎哥
- * @since 2022-01-04
+ * 秒杀优惠券服务实现类，提供秒杀优惠券的相关功能
  */
 @Service
-public class SeckillVoucherServiceImpl extends ServiceImpl<SeckillVoucherMapper, SeckillVoucher> implements ISeckillVoucherService {
+public class SeckillVoucherServiceImpl extends ServiceImpl<SeckillVoucherMapper, SeckillVoucher>
+        implements ISeckillVoucherService {
 
 }

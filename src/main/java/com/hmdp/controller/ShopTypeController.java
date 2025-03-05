@@ -1,6 +1,5 @@
 package com.hmdp.controller;
 
-
 import com.hmdp.dto.Result;
 
 import com.hmdp.service.IShopTypeService;
@@ -15,8 +14,7 @@ import javax.annotation.Resource;
  * 前端控制器
  * </p>
  *
- * @author 虎哥
- * @since 2021-12-22
+ * 商铺类型控制器，提供商铺类型的查询功能
  */
 @RestController
 @RequestMapping("/shop-type")
@@ -26,9 +24,9 @@ public class ShopTypeController {
 
     @GetMapping("list")
     public Result queryTypeList() {
-//        List<ShopType> typeList = typeService
-//                .query().orderByAsc("sort").list();
-//
+        // List<ShopType> typeList = typeService
+        // .query().orderByAsc("sort").list();
+        //
         return typeService.queryTypeList();
     }
 }

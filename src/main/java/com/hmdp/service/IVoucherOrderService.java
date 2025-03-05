@@ -6,11 +6,10 @@ import com.baomidou.mybatisplus.extension.service.IService;
 
 /**
  * <p>
- *  服务类
+ * 服务类
  * </p>
  *
- * @author 虎哥
- * @since 2021-12-22
+ * 优惠券订单服务接口，定义优惠券下单、秒杀等功能
  */
 public interface IVoucherOrderService extends IService<VoucherOrder> {
 

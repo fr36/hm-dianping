@@ -1,7 +1,5 @@
 package com.hmdp.service.impl;
 
-import cn.hutool.core.util.StrUtil;
-import cn.hutool.json.JSONUtil;
 import com.hmdp.dto.Result;
 import com.hmdp.entity.Shop;
 import com.hmdp.mapper.ShopMapper;
@@ -20,11 +18,10 @@ import static com.hmdp.utils.RedisConstants.*;
 
 /**
  * <p>
- *  服务实现类
+ * 服务实现类
  * </p>
  *
- * @author 虎哥
- * @since 2021-12-22
+ * 商铺服务实现类，提供商铺信息的查询、更新等功能，并实现了缓存处理
  */
 @Service
 public class ShopServiceImpl extends ServiceImpl<ShopMapper, Shop> implements IShopService {
@@ -44,8 +41,7 @@ public class ShopServiceImpl extends ServiceImpl<ShopMapper, Shop> implements IS
                 TimeUnit.MINUTES);
 
         // 4. 不存在，返回错误
-        if(shop == null){
-//            stringRedisTemplate.opsForValue().set(key, "", CACHE_NULL_TTL, TimeUnit.MINUTES);
+        if (shop == null) {
             return Result.fail("店铺不存在");
         }
         // 5. 存在，写入数据库，返回
@@ -57,12 +53,12 @@ public class ShopServiceImpl extends ServiceImpl<ShopMapper, Shop> implements IS
     @Transactional
     public Result update(Shop shop) {
         Long id = shop.getId();
-        if(id == null){
+        if (id == null) {
             return Result.fail("店铺 id 不能为空");
         }
-        //1.更新数据库
+        // 1.更新数据库
         updateById(shop);
-        //2. 删除缓存
+        // 2. 删除缓存
         stringRedisTemplate.delete(CACHE_SHOP_KEY + id);
 
         return Result.ok();

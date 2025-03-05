@@ -32,8 +32,7 @@ import static com.hmdp.utils.SystemConstants.USER_NICK_NAME_PREFIX;
  * 服务实现类
  * </p>
  *
- * @author 虎哥
- * @since 2021-12-22
+ * 用户服务实现类，提供用户登录、注册、信息查询等功能
  */
 @Slf4j
 @Service

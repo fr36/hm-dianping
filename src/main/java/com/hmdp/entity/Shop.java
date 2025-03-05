@@ -16,8 +16,7 @@ import java.time.LocalDateTime;
  * 
  * </p>
  *
- * @author 虎哥
- * @since 2021-12-22
+ * 商铺实体类，存储商铺的基本信息，如名称、地址、评分等
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
@@ -102,7 +101,6 @@ public class Shop implements Serializable {
      * 更新时间
      */
     private LocalDateTime updateTime;
-
 
     @TableField(exist = false)
     private Double distance;

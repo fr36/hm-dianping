@@ -8,11 +8,10 @@ import java.util.List;
 
 /**
  * <p>
- *  Mapper 接口
+ * Mapper 接口
  * </p>
  *
- * @author 虎哥
- * @since 2021-12-22
+ * 优惠券数据访问接口，提供对优惠券数据的基本CRUD操作和自定义查询
  */
 public interface VoucherMapper extends BaseMapper<Voucher> {
 

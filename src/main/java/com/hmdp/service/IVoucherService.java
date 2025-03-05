@@ -6,17 +6,15 @@ import com.baomidou.mybatisplus.extension.service.IService;
 
 /**
  * <p>
- *  服务类
+ * 服务类
  * </p>
  *
- * @author 虎哥
- * @since 2021-12-22
+ * 优惠券服务接口，定义优惠券的添加、查询等功能
  */
 public interface IVoucherService extends IService<Voucher> {
 
     Result queryVoucherOfShop(Long shopId);
 
     void addSeckillVoucher(Voucher voucher);
-
 
 }
