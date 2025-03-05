@@ -53,6 +53,9 @@ public class CacheClient {
      * @param keyPrefix 键前缀
      * @param id 数据ID
      * @param type 数据类型
+     * @param dbFallback 数据库查询回调函数
+     * @param time 过期时间
+     * @param unit 过期时间的时间单位
      */
     public <R, ID>  R queryWithPassThrough(String keyPrefix, ID id, Class<R> type, Function<ID, R> dbFallback, Long time, TimeUnit unit){
         String key = keyPrefix + id;
