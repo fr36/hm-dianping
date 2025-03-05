@@ -29,7 +29,7 @@ public class CacheClient {
     /**
      * 使用逻辑过期时间设置Redis键值对
      * 逻辑过期时间是指在Redis中存储的数据附带一个过期时间，而不是使用Redis自身的过期机制
-     * 这种方法可以更灵活地处理缓存过期逻辑，避免缓存雪崩等问题
+     * 避免缓存雪崩
      *
      * @param key 存储在Redis中的键
      * @param value 存储在Redis中的值
@@ -47,6 +47,13 @@ public class CacheClient {
         stringRedisTemplate.opsForValue().set(key, JSONUtil.toJsonStr(redisData));
     }
 
+    /**
+     * 使用缓存穿透策略查询数据
+     * 
+     * @param keyPrefix 键前缀
+     * @param id 数据ID
+     * @param type 数据类型
+     */
     public <R, ID>  R queryWithPassThrough(String keyPrefix, ID id, Class<R> type, Function<ID, R> dbFallback, Long time, TimeUnit unit){
         String key = keyPrefix + id;
         String json = stringRedisTemplate.opsForValue().get(key);
