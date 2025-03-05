@@ -56,7 +56,7 @@ public class ShopServiceImpl extends ServiceImpl<ShopMapper, Shop> implements IS
                 Shop.class,
                 this::getById,
                 10L,
-                TimeUnit.SECONDS);
+                TimeUnit.MINUTES);
         
         if (shop == null) {
             return Result.fail("店铺不存在");
