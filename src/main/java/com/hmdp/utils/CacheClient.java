@@ -74,7 +74,7 @@ public class CacheClient {
 
         R r = dbFallback.apply(id);
         if (r == null) {
-            stringRedisTemplate.opsForValue().set(key, "", CACHE_NULL_TTL, TimeUnit.MINUTES);
+            stringRedisTemplate.opsForValue().set(key, "", CACHE_NULL_TTL, TimeUnit.SECONDS);
             return null;
         }
         this.set(key, r, time, unit);
