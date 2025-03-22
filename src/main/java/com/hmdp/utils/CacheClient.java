@@ -52,7 +52,7 @@ public class CacheClient {
     }
 
     /**
-     * 使用缓存穿透策略查询数据
+     * 使用避免缓存穿透的策略查询数据(返回空对象)
      * 
      * @param keyPrefix  键前缀
      * @param id         数据ID

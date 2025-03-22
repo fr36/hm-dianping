@@ -8,7 +8,9 @@ import com.hmdp.service.ISeckillVoucherService;
 import com.hmdp.service.IVoucherOrderService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.hmdp.utils.RedisIdWorker;
+
 import com.hmdp.utils.SimpleRedisLock;
+
 import com.hmdp.utils.UserHolder;
 import org.redisson.api.RLock;
 import org.redisson.api.RedissonClient;
@@ -43,6 +45,7 @@ public class VoucherOrderServiceImpl extends ServiceImpl<VoucherOrderMapper, Vou
 
     @Resource
     private RedissonClient redissonClient;
+    //redisson 实现分布式锁
 
     @Override
     public Result seckillVoucher(Long voucherId) {
