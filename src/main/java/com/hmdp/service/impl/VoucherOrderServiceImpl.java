@@ -40,8 +40,8 @@ public class VoucherOrderServiceImpl extends ServiceImpl<VoucherOrderMapper, Vou
     @Resource
     private RedisIdWorker redisIdWorker;
 
-    @Autowired
-    private StringRedisTemplate stringRedisTemplate;
+    // @Autowired
+    // private StringRedisTemplate stringRedisTemplate;
 
     @Resource
     private RedissonClient redissonClient;
@@ -75,7 +75,7 @@ public class VoucherOrderServiceImpl extends ServiceImpl<VoucherOrderMapper, Vou
             IVoucherOrderService proxy = (IVoucherOrderService) AopContext.currentProxy();
             return proxy.createVoucherOrder(voucherId);
         } finally {
-            lock.unlock();
+            // lock.unlock();
         }
     }
 

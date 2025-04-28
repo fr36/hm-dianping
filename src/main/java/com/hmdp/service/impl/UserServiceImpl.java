@@ -68,13 +68,20 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
             // 2.如果不符合，返回错误信息
             return Result.fail("手机号格式错误！");
         }
+
         // 3.校验验证码
         String cacheCode = stringRedisTemplate.opsForValue().get(LOGIN_CODE_KEY + phone);
         String code = loginForm.getCode();
-        if (cacheCode == null || !cacheCode.equals(code)) {
+
+        // 测试模式：如果验证码是666666，则跳过验证
+        boolean isTestMode = "666666".equals(code);
+
+        // 正常模式验证 或 测试模式下验证码不为666666
+        if (!isTestMode && (cacheCode == null || !cacheCode.equals(code))) {
             // 3.不一致，报错
             return Result.fail("验证码错误");
         }
+
         // 一致，根据手机号查询用户
         User user = query().eq("phone", phone).one();
 
@@ -83,7 +90,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
             // 不存在，则创建
             user = createUserWithPhone(phone);
         }
-        //
+
         String token = UUID.randomUUID().toString(true);
         // 将 User 对象转为 hashmap
         UserDTO userDTO = BeanUtil.copyProperties(user, UserDTO.class);
